@@ -6,6 +6,9 @@ function sig = getintegralsig(integral, rs, cs, re, ce)
 % signatures INTEGRAL.
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 if rs ~= 0 && cs ~= 0
     sig = integral(re,ce,:) + integral(rs,cs,:) -  integral(rs,ce,:) - ...

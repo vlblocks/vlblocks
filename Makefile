@@ -129,7 +129,7 @@ autorights: distclean
 	  . \
 	  --recursive    \
 	  --verbose \
-	  --template copylet.txt \
+	  --template bsds \
 	  --years 2009   \
 	  --authors "Brian Fulkerson and Andrea Vedaldi" \
 	  --holders "Brian Fulkerson and Andrea Vedaldi" \

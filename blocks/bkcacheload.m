@@ -6,6 +6,9 @@ function x = bkcacheload(bk, prop, path)
 %   memory. Otherwise, it is loaded from PATH and put into the cache.
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 global wrd ;
 

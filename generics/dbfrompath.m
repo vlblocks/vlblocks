@@ -26,6 +26,9 @@ function db = dbfrompath(path, varargin)
 %    to see the default filter.
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 do_shuffle = 0 ;
 verbose    = 0 ;

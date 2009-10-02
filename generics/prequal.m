@@ -2,6 +2,9 @@ function [eer precision recall] = prequal(tp, fp, tn, fn)
 % PREQUAL Find the equal point of the precision recall curve
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 % Plot PR curve
 truepos   = sum(tp, 2);

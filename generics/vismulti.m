@@ -6,6 +6,9 @@ function stats=vismulti(varargin)
 %   [STATS1, STATS2, ...] = VISMULTI(TAG1, TAG2, ...)
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 if nargin < 1
   varargin{1} = '.*' ;

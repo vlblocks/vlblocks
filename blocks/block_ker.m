@@ -68,6 +68,9 @@ function bk = block_ker(bk, varargin)
 %    Returns [K, ROW_SEG_IDS, COL_SEG_IDS].
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 global wrd ;
 

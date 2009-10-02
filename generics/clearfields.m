@@ -6,6 +6,9 @@ function S = clearfields(ST, fields)
 %   structure S without the fields, if they existed.
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 S = ST;
 for f = 1:length(fields)

@@ -11,6 +11,9 @@ function [reduce, mapkeys] = bksplit(bk, keys, varargin)
 %  already mapped the keys and perform some action on them.
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 global wrd ;
 

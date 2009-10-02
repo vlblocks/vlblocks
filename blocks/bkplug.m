@@ -8,6 +8,9 @@ function bk = bkplug(bk, input, tag)
 %  See also BKINIT(), BKBEGIN(), BKEND().
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 found = 0;
 for i = 1:length(bk.inputs)

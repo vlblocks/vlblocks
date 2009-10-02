@@ -39,6 +39,9 @@ function bk = block_aib(bk)
 %     The full AIB merge tree.
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 global wrd ;
 

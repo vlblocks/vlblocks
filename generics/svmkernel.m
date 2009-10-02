@@ -12,6 +12,9 @@ function K = svmkernel(x,xt,varargin)
 %     RBF kernel parameter.
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 test_mode = 0 ;
 kernel    = linear ;

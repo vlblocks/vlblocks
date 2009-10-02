@@ -2,6 +2,9 @@ function db = dbfrompascal09 (vocroot, varargin)
 % DBFROMPASCAL09  Construct DB from PASCAL VOC 2009 data
 
 % AUTORIGHTS
+% Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi
+% Blocks is distributed under the terms of the modified BSD license.
+% The full license may be found in LICENSE.
 
 verbose    = 0 ;
 cat_filt   = '.*' ;
