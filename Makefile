@@ -130,7 +130,7 @@ autorights: distclean
 	  --recursive    \
 	  --verbose \
 	  --template copylet.txt \
-	  --years 2007   \
-	  --authors "Andrea Vedaldi and Brian Fulkerson" \
-	  --holders "Andrea Vedaldi and Brian Fulkerson" \
-	  --program "Bag"
+	  --years 2009   \
+	  --authors "Brian Fulkerson and Andrea Vedaldi" \
+	  --holders "Brian Fulkerson and Andrea Vedaldi" \
+	  --program "Blocks"
