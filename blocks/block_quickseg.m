@@ -154,7 +154,7 @@ for t=1:length(mapkeys)
 
   if ~isempty(bk.ref_size)
     Iseg = imresizesafe(Iseg, 1/rho, 'nearest');
-    map  = imresizesafe(Iseg, 1/rho, 'nearest');
+    map  = imresizesafe(map, 1/rho, 'nearest');
   end
   
   % ------------------------------------------------------------------
