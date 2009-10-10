@@ -1,6 +1,5 @@
 function x = bkcacheload(bk, prop, path)
 % BKCACHELOAD Loads data from a global cache
-%
 %   VAL = BKCACHELOAD(BK, PROP, PATH) Loads the property PROP from the
 %   block BK. If the value in the cache is current, it is loaded from
 %   memory. Otherwise, it is loaded from PATH and put into the cache.

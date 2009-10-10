@@ -1,6 +1,5 @@
 function bk = block_classify_svm(bk)
 % BLOCK_CLASSIFY_SVM Classify segments with an SVM 
-%
 %   This block learns an SVM using an input kernel and uses it to
 %   classify segment histograms.
 %

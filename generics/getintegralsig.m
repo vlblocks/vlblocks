@@ -1,9 +1,8 @@
 function sig = getintegralsig(integral, rs, cs, re, ce)
 % GETINTEGRALSIG Get integral histogram signature
-%
-% SIG = GETINTEGRALSIG(INTEGRAL, RS, CS, RE, CE) computes the
-% histogram of the window defined by (RS:RE,CS:CE) using integral
-% signatures INTEGRAL.
+%   SIG = GETINTEGRALSIG(INTEGRAL, RS, CS, RE, CE) computes the
+%   histogram of the window defined by (RS:RE,CS:CE) using integral
+%   signatures INTEGRAL.
 
 % AUTORIGHTS
 % Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi

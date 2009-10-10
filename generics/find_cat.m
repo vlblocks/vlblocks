@@ -1,6 +1,5 @@
 function c = find_cat(db, name)
 % FIND_CAT Find a category in the database
-%
 %   C = FIND_CAT(DB, NAME) finds the category id of the database
 %   category named NAME.
 

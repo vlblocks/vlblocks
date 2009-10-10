@@ -1,6 +1,5 @@
 function stats=visloc(varargin)
 % VISLOC Visualize localization
-%
 %   STATS=VISLOC(TAG)
 %
 %   [STATS1, STATS2, ...] = VISLOC(TAG1, TAG2, ...)

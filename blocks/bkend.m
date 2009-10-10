@@ -1,6 +1,5 @@
 function bk = bkend(bk)
 % BKEND End a block
-%
 %  BK = BKEND(BK) Ends the block by updating the completion timestamp
 %  and saving the configuration.
 %

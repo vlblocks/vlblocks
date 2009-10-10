@@ -1,6 +1,5 @@
 function bk = block_test_svm(bk, varargin)
 % BLOCK_TEST_SVM Classify whole images with an SVM
-%
 %   Classify whole images with an SVM.
 %
 %   BK = BLOCK_TEST_SVM() Initializes the block with the default

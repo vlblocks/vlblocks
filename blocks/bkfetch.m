@@ -1,6 +1,5 @@
 function varargout = bkfetch(bk, varargin)
 % BKFETCH Fetch data from a block
-%
 %  BK = BKFETCH(BK) returns BK unchanged.
 %
 %  BK = BKFETCH(TAG) returns the block BK corresponding to TAG.

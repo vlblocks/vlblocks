@@ -1,6 +1,5 @@
 function bk = block_test_bruteloc(bk, varargin)
 % BLOCK_TEST_BRUTELOC Test brute-force localization
-%
 %   Brute-force localization, as proposed in Fulkerson et. al 2008.
 %
 %   BK = BLOCK_TEST_BRUTELOC() Initializes the block with the default

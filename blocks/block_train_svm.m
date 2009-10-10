@@ -1,6 +1,5 @@
 function bk = block_train_svm(bk, varargin)
 % BLOCK_TRAIN_SVM Train an SVM
-%
 %   Trains an SVM from a provided training kernel.
 %
 %   BK = BLOCK_TRAIN_SVM() Initializes the block with the default

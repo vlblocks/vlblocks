@@ -1,6 +1,5 @@
 function bk = block_vis(bk, varargin)
 % BLOCK_VIS Visualize whole image classification
-%
 %   Visualize whole image classification.
 %
 %   BK = BLOCK_VIS() Initializes the block with the default options.

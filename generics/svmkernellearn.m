@@ -1,59 +1,58 @@
 function cl = svmkernellearn(K, y, varargin)
 % SVMKERNELLEARN  Train SVM with custom kernel
-%  CL = SVMKERNELLEARN(K, Y) uses LIBSVM to train an SVM with custom
-%  kernel K and labels Y. The result CL is a structure with fields:
+%   CL = SVMKERNELLEARN(K, Y) uses LIBSVM to train an SVM with custom
+%   kernel K and labels Y. The result CL is a structure with fields:
 %
-%  CL.LIBBSVM_CL   : SVM (libsvm format)
-%  CL.RBF          : Using RBF transformation? (0/1)
-%  CL.GAMMA        : RBF parameter
-%  CL.LABELS       : Category labels
+%   CL.LIBBSVM_CL   : SVM (libsvm format)
+%   CL.RBF          : Using RBF transformation? (0/1)
+%   CL.GAMMA        : RBF parameter
+%   CL.LABELS       : Category labels
 %
-%  Options:
+%   Options:
 %
-%  Type ['C']
-%    Set the SVM type to 'C' or 'nu'.
+%   Type ['C']
+%     Set the SVM type to 'C' or 'nu'.
 %
-%  C [1]
-%    Set the SVM C parameter. The C parameter establishes the
-%    trade-off between maximizing the margin of the decision function
-%    from the correctly classified data and the number of
-%    misclassified data. A large C gives more importance to
-%    reducing the number of mistakes, but may increase overfitting.
+%   C [1]
+%     Set the SVM C parameter. The C parameter establishes the
+%     trade-off between maximizing the margin of the decision function
+%     from the correctly classified data and the number of
+%     misclassified data. A large C gives more importance to reducing
+%     the number of mistakes, but may increase overfitting.
 %
-%  Nu [.5]
-%    Se the nu-SVM nu parameter.
+%   Nu [.5]
+%     Set the nu-SVM nu parameter.
 %
-%  RBF [0]
-%    Enable RBF transformation. Assuming that the input argument K is
-%    actually a metric, the kernel is defined as K' = EXP(- gamma K).
+%   RBF [0]
+%     Enable RBF transformation. Assuming that the input argument K is
+%     actually a metric, the kernel is defined as K' = EXP(- gamma K).
 %
-%  Gamma [[]]
-%    GAMMA constant of the RBF transformation.
+%   Gamma [[]]
+%     GAMMA constant of the RBF transformation.
 %
-%  Balance [0]
-%    Enable data balancing. Balancing reweights the data so that the
-%    empirical error term (see C option) in the SVM cost functional is
-%    computed assuming that the labels are equally probable. Balancing
-%    affects the value of the C parameter for each sample, increasing
-%    its value for the less represented labels.
+%   Balance [0]
+%     Enable data balancing. Balancing reweights the data so that the
+%     empirical error term (see C option) in the SVM cost functional
+%     is computed assuming that the labels are equally probable.
+%     Balancing affects the value of the C parameter for each sample,
+%     increasing its value for the less represented labels.
 %
-%  CrossValidation [0]
-%    Perform N-fold cross validation to determine the optimal value of
-%    the paramter C. In this case specifying C has no effect.
+%   CrossValidation [0]
+%     Perform N-fold cross validation to determine the optimal value of
+%     the paramter C. In this case specifying C has no effect.
 %
-%  Verbosity [0]
-%    Set verbosity level.
+%   Verbosity [0]
+%     Set verbosity level.
 %
-%  Debug [0]
-%    Print debugging informations.
+%   Debug [0]
+%     Print debugging informations.
 %
-%  Probability [0]
-%    Return probability of classification instead of the decision value.
+%   Probability [0]
+%     Return probability of classification instead of the decision value.
 %
+%   LIMITATIONS. Currently, only C-SVM is supported.
 %
-%  LIMITATIONS. Currently, only C-SVM is supported.
-%
-%  See also SVMKERNELTEST().
+%   See also SVMKERNELTEST().
 
 % AUTORIGHTS
 % Copyright (c) 2009 Brian Fulkerson and Andrea Vedaldi

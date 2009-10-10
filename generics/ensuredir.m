@@ -1,6 +1,5 @@
 function ensuredir(path)
 % ENSUREDIR  Make sure a directory exists.
-%
 %  ENSUREDIR(PATH) check for the existence of the directory
 %  PATH and attempt to create it otherwise.
 

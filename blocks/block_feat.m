@@ -1,6 +1,5 @@
 function bk = block_feat(bk, varargin)
 % BLOCK_FEAT  Extract features from images in a database.
-%
 %   This block extracts features from images in a database.
 %
 %   BK = BLOCK_DICTIONARY() Initializes the block with the default

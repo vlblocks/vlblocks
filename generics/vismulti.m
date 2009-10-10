@@ -1,6 +1,5 @@
 function stats=vismulti(varargin)
 % VISMULTI Visualize multiple category localization
-%
 %   STATS=VISMULTI(TAG)
 %
 %   [STATS1, STATS2, ...] = VISMULTI(TAG1, TAG2, ...)

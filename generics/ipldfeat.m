@@ -1,6 +1,5 @@
 function [f,d] = ipldfeat(I, varargin)
 % IPLDFEAT  SIFT IPLD impelmentation interface
-%
 %  [F,D] = IPLDFEAT(I) uses Dorko's IPLD SIFT code to compute
 %  frames F and descriptors D.
 %

@@ -1,6 +1,5 @@
 function bk = block_quickseg(bk, varargin)
 % BLOCK_QUICKSEG Quick shift segmentation
-%
 %   This block computes the quick shift segmentation of all database
 %   images.
 %

@@ -1,6 +1,5 @@
 function reports = fetchreports(pattern)
 % FETCHREPORTS Fetch reports from visualization blocks
-%
 %   REPORTS = FETCHREPORTS(PATTERN) fetches the reports specified by
 %   pattern and returns a structure with their contents.
 

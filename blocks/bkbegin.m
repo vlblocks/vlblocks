@@ -1,6 +1,5 @@
 function [bk, dirty] = bkbegin(bk)
 % BKBEGIN  Begin a block
-%
 %   [BK, DIRTY] = BKBEGIN(BK) Begins a block BK by first checking if
 %   it exists. If the block exists, it checks if any input blocks have
 %   changed since this block was last executed. It also checks if any

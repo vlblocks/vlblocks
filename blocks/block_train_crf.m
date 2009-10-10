@@ -1,6 +1,5 @@
 function bk = block_train_crf(bk, varargin)
 % BLOCK_TRAIN_CRF Train a superpixel CRF
-%
 %   Train a superpixel CRF from validation images. If validation
 %   images are not available, uses training images.
 %

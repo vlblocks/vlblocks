@@ -1,12 +1,11 @@
 function [ker_func, norm_func] = kernel_function(kernel, normalize)
 % KERNEL_FUNCTION Returns function pointers for various kernels
-%
-%    [KFUNC, NFUNC] = KERNEL_FUNCTION(KERNEL, NORMALIZE) returns the
-%    kernel KFUNC and normalization function NFUNC for two string
-%    inputs.
+%   [KFUNC, NFUNC] = KERNEL_FUNCTION(KERNEL, NORMALIZE) returns the
+%   kernel KFUNC and normalization function NFUNC for two string
+%   inputs.
 %    
-%    Possible values for normalize:: {'none', 'l1', 'l2', 'linf'}
-%    Possible values for kernel:: {'l1', 'chi2', 'hell', 'dl2', 'dl1',
+%   Possible values for normalize:: {'none', 'l1', 'l2', 'linf'}
+%   Possible values for kernel:: {'l1', 'chi2', 'hell', 'dl2', 'dl1',
 %     'dchi2', 'dhell'}
 
 % AUTORIGHTS

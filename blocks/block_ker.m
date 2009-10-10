@@ -1,6 +1,5 @@
 function bk = block_ker(bk, varargin)
 % BLOCK_KER Construct a kernel
-%
 %   This block constructs an SVM kernel on two sets of segment ids or
 %   segment ids and superpixel ids.
 %

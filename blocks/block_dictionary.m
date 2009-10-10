@@ -1,6 +1,5 @@
 function bk = block_dictionary(bk, varargin)
 % BLOCK_DICTIONARY Construct a dictionary
-%
 %   This block learns a dictionary from a database and a set of
 %   features.
 %

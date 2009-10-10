@@ -1,6 +1,5 @@
 function S = clearfields(ST, fields)
 % CLEARFIELDS Clear the specified fields from a structure
-%
 %   S = CLEARFIELDS(ST, FIELDS) clears the fields listed in the cell
 %   array of strings FIELDS from the structure ST. Returns a modified
 %   structure S without the fields, if they existed.

@@ -1,6 +1,5 @@
 function bk = block_test_segcrf(bk, varargin)
 % BLOCK_TEST_SEGCRF Classify test segments with a CRF
-%
 %   Superpixel CRF, as proposed in Fulkerson et. al 2009.
 %
 %   BK = BLOCK_TEST_SEGCRF() Initializes the block with the default

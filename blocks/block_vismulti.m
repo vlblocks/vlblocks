@@ -1,6 +1,5 @@
 function bk = block_vismulti(bk, varargin)
 % BLOCK_VISMULTI Visualize multi-class segmentation problems
-%
 %   Visualize multi-class localization (such as Pascal-07).
 %
 %   BK = BLOCK_VISMULTI() Initializes the block with the default

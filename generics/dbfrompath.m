@@ -1,6 +1,5 @@
 function db = dbfrompath(path, varargin)
 % DBFROMPATH  Initialize a database of images from a directory
-%
 %  DB = DBFROMPATH(PATH) builds a database from the images in a file
 %  hierarchy. The directory PATH has one sub-directory for each visual
 %  category and, within each of those, a list of images from the

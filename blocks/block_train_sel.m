@@ -1,6 +1,5 @@
 function bk = block_train_sel(bk)
 % BLOCK_TRAIN_SEL Select training superpixels
-%
 %   Superpixel CRF, as proposed in Fulkerson et. al 2009.
 %
 %   BK = BLOCK_TEST_SEGCRF() Initializes the block with the default

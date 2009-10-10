@@ -1,6 +1,5 @@
 function [y, dec, acc] = svmkerneltest(cl, K, varargin)
 % SVMKERNELTEST Test an SVM on a computed kernel
-%
 %  Y = SVMKERNELTEST(CL, K) test the SVM CL on the testing data K. CL
 %  is a SVM obtained by SVMKERNELTRAIN(). K is the kernel matrix,
 %  training vectors along the columns and test vectors along the rows.

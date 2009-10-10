@@ -1,6 +1,5 @@
 function bk = block_quickstat(bk, varargin)
 % BLOCK_QUICKSTAT Generate statistics about quick shift segmentations
-%   
 %   This block computes statistics on the set of quick shift
 %   segmentations.
 % 

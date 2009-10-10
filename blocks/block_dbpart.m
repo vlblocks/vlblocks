@@ -1,6 +1,5 @@
 function bk = block_dbpart(bk)
 % BLOCK_DBPART  Partition a database into training and testing images
-%
 %   BK = BLOCK_DBPART() Initializes the block with the default
 %   options.
 %

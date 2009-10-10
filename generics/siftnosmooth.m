@@ -1,7 +1,6 @@
 function [f,d]=siftnosmooth(I, f, varargin)
 % SIFTNOSMOOTH Calculate a SIFT descriptor without smoothing
-%
-% [F,D] = SIFTNOSMOOTH(I, F)
+%   [F,D] = SIFTNOSMOOTH(I, F)
 %
 % Options:
 %

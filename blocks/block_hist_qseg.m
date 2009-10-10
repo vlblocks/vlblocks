@@ -1,6 +1,5 @@
 function bk = block_hist_qseg(bk, varargin)
 % BLOCK_HIST_QSEG Construct histograms for quick shift superpixels
-%
 %   This block extracts histograms for quick shift superpixels.
 %
 %   BK = BLOCK_HIST_QSEG() Initializes the block with the default options.

@@ -1,6 +1,5 @@
 function [reduce, mapkeys] = bksplit(bk, keys, varargin)
 % BKSPLIT  Splits keys according to the split property of the block
-%
 %  [REDUCE, MAPKEYS] = BKSPLIT(BK, KEYS) Splits KEYS into N chunks,
 %  where N is specified by BK.split. Runs N processes via SSH, which
 %  continue at this line of the file with REDUCE = 0 and MAPKEYS

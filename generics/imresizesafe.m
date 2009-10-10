@@ -1,6 +1,5 @@
 function I = imresizesafe(varargin)
 % IMRESIZESAFE A safe version of IMRESIZE
-%
 %   Uses IMRESIZE_OLD if it exists, otherwise defaults to IMRESIZE
 
 % AUTORIGHTS

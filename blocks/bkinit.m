@@ -1,6 +1,5 @@
 function bk = bkinit(type, varargin)
 % BKINIT  Initialize a block
-%
 %   BK = BKINIT('TYPE') initialize a block of type TYPE with no
 %   required inputs. Inputs may still be connected with BKPLUG().
 %

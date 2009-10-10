@@ -1,6 +1,5 @@
 function [labels Eafter E] = crfprocess(segs, segclass, unary, params, boundary)
 % CRFPROCESS Processes a CRF on superpixels
-%
 %   [LABELS EAFTER E] = CRFPROCESS(SEGS, SEGCLASS, UNARY, PARAMS, BOUNDARY)
 %   Sets up and processes a CRF on the structure SEGS, with initial
 %   labels SEGCLASS, unary potentials UNARY, parameters PARAMS, and

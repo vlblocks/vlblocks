@@ -1,6 +1,5 @@
 function bk = block_db(bk)
 % BLOCK_DB  Construct a database
-% 
 %   This block constructs a database from a folder structure.
 %
 %   BK = BLOCK_DB() Initializes the block with the default options.

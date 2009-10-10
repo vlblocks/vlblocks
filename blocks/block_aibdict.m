@@ -1,6 +1,5 @@
 function bk = block_aibdict(bk)
 % BLOCK_AIBDICT  Use AIB block to create a compressed dictionary.
-%
 %   This block cuts an AIB tree to form a compact dictionary.
 %
 %   BK = BLOCK_AIBDICT() Initializes the block with the default

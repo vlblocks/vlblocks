@@ -1,6 +1,5 @@
 function bk = block_aib(bk)
 % BLOCK_AIB Use AIB to compress training histograms
-%
 %   This block uses agglomerative information bottleneck, as proposed
 %   in Slonim et. al 2000. See also BLOCK_AIBDICT()
 %

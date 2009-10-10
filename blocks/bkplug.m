@@ -1,6 +1,5 @@
 function bk = bkplug(bk, input, tag)
 % BKPLUG Connect an input to a block
-%
 %   BK = BKPLUG(BK, INPUT, TAG) plugs the block TAG to the input slot
 %   INPUT of block BK. Notice that TAG is a block TAG, while BK is a
 %   block configuration.

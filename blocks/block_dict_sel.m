@@ -1,6 +1,5 @@
 function bk = block_dict_sel(bk)
 % BLOCK_DICT_SEL  Select a dictionary instance
-%
 %   This block selects a dictionary instance from the dictionary
 %   training block.
 %

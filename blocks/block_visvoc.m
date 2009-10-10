@@ -1,6 +1,5 @@
 function bk = block_visvoc(bk, varargin)
 % BLOCK_VISVOC Create VOC segmentation submission compatible tgz files.
-%
 %   Create VOC segmentation submission compatible tgz files.
 %
 %   BK = BLOCK_VISVOC() Initializes the block with the default

@@ -1,6 +1,5 @@
 function bk = block_test_segloc(bk, varargin)
 % BLOCK_TEST_SEGLOC Classify with superpixel neighborhoods
-%
 %   Superpixel neighborhoods, as proposed in Fulkerson et. al 2009.
 %
 %   BK = BLOCK_TEST_SEGLOC() Initializes the block with the default

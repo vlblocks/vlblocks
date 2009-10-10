@@ -1,6 +1,5 @@
 function bk = block_hist(bk, varargin)
 % BLOCK_HIST Construct histograms for all database images.
-%
 %   This block extracts histograms from images in a database.
 %
 %   BK = BLOCK_HIST() Initializes the block with the default options.

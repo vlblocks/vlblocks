@@ -1,6 +1,5 @@
 function bk = block_visloc(bk, varargin)
 % BLOCK_VISLOC Visualize two class localization
-%
 %   Visualize two-class localization (such as Graz-02) and find the
 %   precision=recall point.
 %

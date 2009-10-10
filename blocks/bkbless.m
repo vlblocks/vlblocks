@@ -1,6 +1,5 @@
 function bk = bkbless(bk)
 % BKBLESS  Forces a block to be up-to-date
-%
 %  BK = BKBLESS(BK) "blesses" a block BK, forcing it to be up-to-date
 %  if it exists. A call to BKBEGIN(BK) on the returned block should
 %  not mark the block as dirty.
