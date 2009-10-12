@@ -1,5 +1,10 @@
-BLOCKS
+BLOCKS version 0.1.1
 Brian Fulkerson and Andrea Vedaldi
+
+Changes:
+0.1.1    Added HTML documentation (folder "doc")
+         Corrected a bug in block_quickseg
+0.1      Initial release
 
 Requirements:
 
@@ -114,4 +119,5 @@ bk = block_test(bk) ;           % Run the block
 
 % end ===============================================================
 
-More examples and a full website are coming soon.
+The first run will execute the block, and subsequent runs will not
+re-execute the block unless either a parameter (eg. imsize) or an input to the block has changed.

@@ -3,9 +3,8 @@
 # description: Build everything
 
 NAME               := blocks
-VER                := 0.1
+VER                := 0.1.1
 DIST                = $(NAME)-$(VER)
-BINDIST             = $(DIST)-$(ARCH)
 
 # CLFAGS options added to environment
 # MEX    environment has precedence
@@ -80,7 +79,6 @@ all : all-mex
 # --------------------------------------------------------------------
 #                                                      Build MEX files
 # --------------------------------------------------------------------
-# We place the MEX files in toolbox/.
 
 mex_src := $(shell find generics -name "*.c")
 mex_tgt := $(mex_src:.c=.$(MEX_SUFFIX))
