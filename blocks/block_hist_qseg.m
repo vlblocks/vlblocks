@@ -152,10 +152,9 @@ for t=1:length(mapkeys)
   segmap = bkfetch(bkqseg, 'segmap', seg_id);
   hists = zeros(length(segs), length(h));
   ind = sub2ind(size(segmap), round(f(2,dsel)), round(f(1,dsel)));
-  for i = 1:length(h)
-    idx = find(w==i);
-    hists(:, i) = vl_binsum(hists(:, i), ones(length(idx),1), segmap(ind(idx)));
-  end
+  d_labels = segmap( ind );
+  histsidx = sub2ind( size(hists), uint32(d_labels), w );
+  hists = vl_binsum( hists, 1, double(histsidx) );
  
   if 0 
   % Label each segment with a class from the class seg image
