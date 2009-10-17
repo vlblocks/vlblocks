@@ -112,7 +112,7 @@ distclean: clean
 
 .PHONY: dist
 dist: d := $(notdir $(CURDIR)) 
-dist: clean
+dist:
 	git archive --format=zip --prefix=blocks/ v$(VER) > blocks-$(VER).zip 
 
 .PHONY: autorights
