@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="../web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Documentaton - BLOCKS - BLOCK_DICTIONARY</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="../index.html">
+     <img src="../images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Documentaton - BLOCKS - BLOCK_DICTIONARY
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="../index.html">Home</a>
+</li>
+<li><a href="../download.html">Download</a>
+</li>
+<li><a href="mdoc.html">Documentaton</a>
+</li>
+<li><a href="../overview/tut.html">Tutorials</a>
+</li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+    <div class="mdoc">
+<ul class="breadcrumb"><li><a href="mdoc.html">Index</a></li><li><a href="BLOCK_TRAIN_SEL.html">Prev</a></li><li><a href="BLOCK_HIST.html">Next</a></li></ul><div class="documentation"><p>
+This block learns a dictionary from a database and a set of
+features.
+</p><p>
+BK = <a href="BLOCK_DICTIONARY.html">BLOCK_DICTIONARY</a>() Initializes the block with the default
+options.
+</p><p>
+BK = <a href="BLOCK_DICTIONARY.html">BLOCK_DICTIONARY</a>(BK) Executes the block with options and
+inputs BK.
+</p><p>
+Required Inputs:
+</p><dl><dt>
+db
+</dt><dd><p>
+The partitioned database.
+</p></dd><dt>
+feat
+</dt><dd><p>
+Features extracted on the partitioned database.
+</p></dd></dl><p>
+Options:
+</p><dl><dt>
+bk.dictionary
+</dt><dd><p>
+The type of dictionary to create. Supported types:
+ikm: Integer k-means
+hikm: Hierarchical Integer k-means
+</p></dd><dt>
+bk.nfeats
+</dt><dd><p>
+The maximum number of features to sample for training. Default
+1000 features.
+</p></dd><dt>
+bk.rand_seed
+</dt><dd><p>
+Set the random seed before proceeding. Default [] does not
+change the random seeds.
+</p></dd><dt>
+bk.ntrials
+</dt><dd><p>
+The number of trials to run.
+</p></dd><dt>
+bk.split
+</dt><dd><p>
+How many processes to use. Default 0.
+</p></dd><dt>
+bk.seg_ids
+</dt><dd><p>
+The segment ids to use for training. The default of [] will
+select all of the data marked as training in the database.
+</p></dd></dl><p>
+IKM options:
+</p><dl><dt>
+bk.ikm_nwords
+</dt><dd><p>
+Number of visual words generated for each category. If
+IKM_AT_ONCE is activated, this parameter is instead the total
+number of visual words.
+</p></dd><dt>
+bk.ikm_at_once
+</dt><dd><p>
+Train a single dictionary, instead of one for each category.
+</p></dd></dl><p>
+Hierarchical IKM options:
+</p><dl><dt>
+bk.hikm_k
+</dt><dd><p>
+The branching factor of the HIKM tree.
+</p></dd><dt>
+bk.hikm_nleaves
+</dt><dd><p>
+The number of leaf nodes in the HIKM tree.
+</p></dd><dt>
+bk.hikm_only_leaves
+</dt><dd><p>
+Push works as if only the leaves of the tree existed.
+</p></dd></dl><p>
+Block functions:
+</p><dl><dt>
+push
+</dt><dd><p>
+[WORDS,HIST,SEL] = PUSH(DICT, DATA) pushes the data through the
+dictionary. sel indexes which data items correspond to which
+words.
+</p></dd></dl></div></div>
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="../js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 

@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Download</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="index.html">
+     <img src="images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Download
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="index.html">Home</a>
+</li>
+<li><a href="download.html" class='active' >Download</a>
+<ul>
+<li><a href="license.html">License</a>
+</li>
+</ul></li>
+<li><a href="mdoc/mdoc.html">Documentaton</a>
+</li>
+<li><a href="overview/tut.html">Tutorials</a>
+</li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+    
+
+<p>The latest version of Blocks is <code>0.1.1</code>.</p>
+
+<div class="box">
+<h1>Downloads</h1>
+<ul>
+ <li><b><a shape="rect" href="download/blocks-0.1.1.zip">Blocks
+     0.1.1</a></b></li>
+ <li><a shape="rect" href="download/">Previous versions...</a></li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+<h1 id="download.install">MATLAB Installation</h1>
+
+<p>Blocks requires the following software to be somewhere on your MATLAB path in order to run:
+<ul>
+  <li><a shape="rect" href="http://vlfeat.org/">VLFeat 0.9.4.1 or later</a></li>
+  <li><a shape="rect" href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/#matlab">libSVM-mat 2.89</a></li>
+  <li><a shape="rect" href="http://vision.ucla.edu/~brian/gcmex.html">GCmex 1.0</a></li>
+</ul>
+</p>
+
+<p><a shape="rect" href="download.html">Download</a> and unpack the latest
+Blocks distribution in a directory of your choice
+(e.g. <code>~/src/blocks</code>). Let <code>BLOCKSROOT</code> denote
+this directory.</p>
+
+<p>Blocks must be added to MATLAB search path by running
+the <code>blocks_setup</code> command found in
+the <code>BLOCKSROOT</code> directory. From MATLAB prompt
+enter</p>
+
+<pre xml:space="preserve">
+&gt; cd BLOCKSROOT
+&gt; blocks_setup
+</pre>
+
+<p><code>blocks_setup</code> alters the search path for the current MATLAB
+session only (it does not save the changes). To make the change
+permanent, add the following fragment to your
+<a shape="rect" href="http://www.google.com/search?q=site:www.mathworks.com+startup.m&amp;btnI=I"><code>startup.m</code> file</a>:</p>
+
+<pre xml:space="preserve">
+p=pwd ;
+cd BLOCKSROOT ;
+blocks_setup ;
+cd(p) ;
+clear p
+</pre>
+
+<p>Alternatively, you can use the
+<a shape="rect" href="http://www.google.com/search?q=site:www.mathworks.com+savepath&amp;btnI=I"><code>savepath</code>
+command</a> to save the updated search paths.</p>
+
+<h1 id="download.contributing">Repository access</h1>
+
+<p>Blocks is under active development. You
+can <a shape="rect" href="http://github.com/vlblocks/vlblocks/tree/master">browse our
+Git repository</a> or download it by</p>
+
+<pre xml:space="preserve">git clone git://github.com/vlblocks/vlblocks.git</pre>
+
+<p>(This will require <a shape="rect" href="http://www.git-scm.org/">Git</a> to be
+installed). The top of the master branch corresponds to the most
+recent version of Blocks, but is unstable.</p>
+
+<p>We welcome contributions to both the documentation and the source
+code of Blocks. You can create patches against our Git repository and
+send them to us for inclusion in the next version. There are two ways
+to contribute. For minor changes, simply clone our public repository,
+as explained above. Once you have made and committed your changes
+locally, you can submit them to the project via e-mail using a command
+like <code>git-format-patch</code>:
+</p>
+
+<pre xml:space="preserve">git-format-patch origin</pre>
+
+<p>For major additions, we prefer to handle collaboration through
+<a shape="rect" href="http://github.com/">github</a>. Follow 
+<a shape="rect" href="http://github.com/guides/fork-a-project-and-submit-your-modifications">their tutorial</a> 
+to fork <a shape="rect" href="http://github.com/vlblocks/vlblocks/tree/master">our project</a>
+and submit your modifications using a pull request.</p>
+
+
+   
+ 
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 

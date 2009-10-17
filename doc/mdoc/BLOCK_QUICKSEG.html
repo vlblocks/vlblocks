@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="../web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Documentaton - BLOCKS - BLOCK_QUICKSEG</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="../index.html">
+     <img src="../images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Documentaton - BLOCKS - BLOCK_QUICKSEG
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="../index.html">Home</a>
+</li>
+<li><a href="../download.html">Download</a>
+</li>
+<li><a href="mdoc.html">Documentaton</a>
+</li>
+<li><a href="../overview/tut.html">Tutorials</a>
+</li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+    <div class="mdoc">
+<ul class="breadcrumb"><li><a href="mdoc.html">Index</a></li><li><a href="BKBLESS.html">Prev</a></li><li><a href="BLOCK_FEAT.html">Next</a></li></ul><div class="documentation"><p>
+This block computes the quick shift segmentation of all database
+images.
+</p><p>
+BK = <a href="BLOCK_QUICKSEG.html">BLOCK_QUICKSEG</a>() Initializes the block with the default
+options.
+</p><p>
+BK = <a href="BLOCK_QUICKSEG.html">BLOCK_QUICKSEG</a>(BK) Executes the block with options and inputs
+BK.
+</p><p>
+Required Inputs:
+</p><dl><dt>
+db
+</dt><dd><p>
+The database of images to extract quick shift superpixels on.
+</p></dd></dl><p>
+Options:
+</p><dl><dt>
+bk.ratio
+</dt><dd><p>
+The ratio between spatial consistency and color consistency. See
+VL_QUICKSEG(), parameter ratio.
+</p></dd><dt>
+bk.sigma
+</dt><dd><p>
+The standard deviation of the parzen window density estimator.
+See VL_QUICKSEG(), parameter kernelsize.
+</p></dd><dt>
+bk.tau
+</dt><dd><p>
+The maximum distance between nodes in the quick shift tree. See
+VL_QUICKSEG(), parameter maxdist.
+</p></dd><dt>
+bk.ref_size
+</dt><dd><p>
+Resize to ref_size before performing the segmentation.
+Segmentation maps are resized to match the original image upon
+completion.
+</p></dd></dl><p>
+Fetchable attributes:
+</p><dl><dt>
+segs
+</dt><dd><p>
+A structure representing the segmentation. Required parameter:
+seg_id. For each superpixel s in the requested image, the format
+is:
+segs(s).ind     An linear index to all pixels which form the
+</p><pre>
+                superpixel.
+</pre><p>
+segs(s).count   The size of the superpixel in pixels.
+segs(s).color   The mean color of the superpixel.
+segs(s).adj     The neighbors of this superpixel.
+</p></dd><dt>
+segimage
+</dt><dd><p>
+The color segmentation image produced by VL_QUICKSEG(). Required
+parameter: seg_id.
+</p></dd><dt>
+segmap
+</dt><dd><p>
+The label map produced by VL_QUICKSEG. Required parameter
+seg_id. If two outputs are provided, the second output is the
+labels. If three outputs are provided, the third output is the
+size of each superpixel.
+</p></dd><dt>
+labels
+</dt><dd><p>
+A vector of the labels in label map. Required parameter: seg_id
+</p></dd><dt>
+time
+</dt><dd><p>
+The amount of time taken for a particular image. Required
+parameter: seg_id.
+</p></dd></dl></div></div>
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="../js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 

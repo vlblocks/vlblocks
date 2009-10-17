@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="../web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Tutorials - Blocks</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="../index.html">
+     <img src="../images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Tutorials - Blocks
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="../index.html">Home</a>
+</li>
+<li><a href="../download.html">Download</a>
+</li>
+<li><a href="../mdoc/mdoc.html">Documentaton</a>
+</li>
+<li><a href="tut.html">Tutorials</a>
+<ul>
+<li><a href="blocks.html" class='active' >Blocks</a>
+</li>
+<li><a href="bof.html">Bag of Features</a>
+</li>
+<li><a href="aibloc.html">AIB Localize</a>
+</li>
+<li><a href="superpixelcrf.html">Superpixel CRF</a>
+</li>
+</ul></li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+     
+
+<h1>Getting started with Blocks</h1>
+
+<p>The goal of this tutorial is to give you a gentle introduction to the block architecture. After reading this, you should be able to easily create your own blocks.</p>
+
+<ul>
+  <li><a shape="rect" href="blocks.html#tut.blocks.hello">Hello world</a></li>
+  <li><a shape="rect" href="blocks.html#tut.blocks.basic">Basic block structure</a></li>
+</ul>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<h1 id="tut.blocks.hello">Hello world</h1>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+<p>At its core, blocks is a modular framework which allows you to avoid
+repeating computation. Consider the following hello world example:
+</p>
+
+<pre xml:space="preserve">
+% helloworld.m ======================================================
+% Define the location where results should be saved
+global wrd;
+wrd.prefix = 'hwtest';
+
+% Initialize and run a block of type helloworld.
+bk = bkinit('helloworld');
+bk.tag = 'helloworld@default';
+[bk dirty] = bkbegin(bk);
+if dirty
+  % Do some work
+  fprintf('Hello world!\n')
+  bk = bkend(bk);
+end
+
+% end ===============================================================
+</pre>
+
+<p>Running the example once create a few folders and produces the
+output &quot;Hello world!&quot;. Running it a second time should print
+some &quot;up to date&quot; messages, but otherwise do nothing. In a real world
+example, instead of printing a message, we could perform and save the
+results of some computation. The second time the program is run, we
+would have avoided recomputing.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<h1 id="tut.blocks.basic">Basic block structure</h1>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<p>Code involving blocks requires (at minimum) three functions: bkinit,
+bkbegin, and bkend. In the hello world example, we create a block of
+type helloworld with bkinit, then begin the block with bkbegin. At
+this point, if the block is already up to date, we do nothing else.
+However, if it isn't, we perform some computation and close the block.</p>
+
+<p>By convention, we typically wrap bkbegin and bkinit in a block
+function. These functions start with block_, and usually perform one
+task in a pipeline (for example, extracting features). A very simple
+block function looks like:</p>
+
+<pre xml:space="preserve">
+% block_test.m ======================================================
+function bk = block_test(bk, varargin)
+
+% If we do not include an argument, initialize the object.
+if nargin == 0
+  bk = bkinit('test') ;
+  bk.imsize = 50;
+  bk.fetch = @fetch__ ;
+  return ;
+end
+
+global wrd;
+
+% If the block is up-to-date, do nothing.
+[bk, dirty] = bkbegin(bk) ;
+if ~ dirty, return ; end
+
+% Do some computation
+output = vl_dsift(single(rand(bk.imsize)));
+
+% Save the results
+save(fullfile(wrd.prefix, bk.tag, 'test.mat'), 'output', '-MAT');
+
+% End the block
+bk = bkend(bk) ;
+
+% Define a function in order to allow retrieval of data from the block
+function varargout = fetch__(bk, what, varargin)
+
+global wrd;
+
+switch lower(what)    
+case 'output'
+  path = fullfile(wrd.prefix, bk.tag, 'test.mat') ;
+  data = load(path, '-MAT') ;
+  varargout{1} = data.output ;
+otherwise
+  error('block_test: Attempted to fetch unknown type');
+end
+
+% end ===============================================================
+</pre>
+
+<p>There are a few things to notice here. First, the block name starts
+with block_ and ends with the name of the type of block (test). When
+the block is called without arguments, it initializes an instance
+with the block's default options and returns. When the block is called
+with an instance, it checks to see if it is up to date and performs
+some actions. The results are saved in an instance specific folder,
+and may be retrieved using the bkfetch, which in turn calls the
+block's internal fetch function.</p>
+
+<p>With this in mind, we can call this block using the following pattern:</p>
+
+<pre xml:space="preserve">
+% simple_test.m ======================================================
+global wrd;
+wrd.prefix = 'test';
+
+bk = block_test ;               % Initialize with default parameters
+bk.imsize = 100 ;               % Change a parameter
+bk.tag    = 'test@imresize100'; % A tag is required and identifies the
+                                % block instance
+bk = block_test(bk) ;           % Run the block
+
+% end ===============================================================
+</pre>
+
+<p>The first run will execute the block, and subsequent runs will not
+re-execute the block unless either a parameter (eg. imsize) or an input to the block has changed. 
+</p>
+
+
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="../js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 

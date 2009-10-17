@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="../web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Documentaton - BLOCKS - BLOCK_TRAIN_CRF</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="../index.html">
+     <img src="../images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Documentaton - BLOCKS - BLOCK_TRAIN_CRF
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="../index.html">Home</a>
+</li>
+<li><a href="../download.html">Download</a>
+</li>
+<li><a href="mdoc.html">Documentaton</a>
+</li>
+<li><a href="../overview/tut.html">Tutorials</a>
+</li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+    <div class="mdoc">
+<ul class="breadcrumb"><li><a href="mdoc.html">Index</a></li><li><a href="BKINIT.html">Prev</a></li><li><a href="BKVER.html">Next</a></li></ul><div class="documentation"><p>
+Train a superpixel CRF from validation images. If validation
+images are not available, uses training images.
+</p><p>
+BK = <a href="BLOCK_TRAIN_CRF.html">BLOCK_TRAIN_CRF</a>() Initializes the block with the default
+options.
+</p><p>
+BK = <a href="BLOCK_TRAIN_CRF.html">BLOCK_TRAIN_CRF</a>(BK) Executes the block with options and
+inputs BK.
+</p><p>
+Required inputs:
+</p><dl><dt>
+db
+</dt><dd><p>
+The database.
+</p></dd><dt>
+segloc
+</dt><dd><p>
+The unary potentials, in the form output by <a href="BLOCK_TEST_SEGLOC.html">BLOCK_TEST_SEGLOC</a>()
+</p></dd><dt>
+histq
+</dt><dd><p>
+Superpixel histograms.
+</p></dd><dt>
+qseg
+</dt><dd><p>
+Quick shift superpixels.
+</p></dd></dl><p>
+Options:
+</p><dl><dt>
+bk.method
+</dt><dd><p>
+The training method. Valid methods are: static, gridsearch.
+Default 'gridsearch'.
+</p></dd><dt>
+bk.goal
+</dt><dd><p>
+The training goal to optimize. Valid goals are: meanacc,
+intersection-union. Default 'intersection-union'.
+</p></dd><dt>
+bk.luv
+</dt><dd><p>
+Should the color difference be in the LUV space? Default 1.
+</p></dd><dt>
+bk.max_images
+</dt><dd><p>
+If there are more than max_images in the validation or training
+data, select max_images and use those. Default 1000.
+</p></dd></dl><p>
+Fetchable attributes:
+</p><dl><dt>
+params
+</dt><dd><p>
+The learned parameters of the CRF.
+</p></dd><dt>
+paramspace
+</dt><dd><p>
+A structure containing the parameters tried at each iteration.
+</p></dd></dl></div></div>
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="../js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 

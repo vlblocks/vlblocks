@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="../web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Documentaton - GENERICS - SVMKERNELLEARN</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="../index.html">
+     <img src="../images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Documentaton - GENERICS - SVMKERNELLEARN
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="../index.html">Home</a>
+</li>
+<li><a href="../download.html">Download</a>
+</li>
+<li><a href="mdoc.html">Documentaton</a>
+</li>
+<li><a href="../overview/tut.html">Tutorials</a>
+</li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+    <div class="mdoc">
+<ul class="breadcrumb"><li><a href="mdoc.html">Index</a></li><li><a href="CRFPROCESS.html">Prev</a></li><li><a href="ENSUREDIR.html">Next</a></li></ul><div class="documentation"><p>
+CL = <a href="SVMKERNELLEARN.html">SVMKERNELLEARN</a>(K, Y) uses LIBSVM to train an SVM with custom
+kernel K and labels Y. The result CL is a structure with fields:
+</p><p>
+CL.LIBBSVM_CL   : SVM (libsvm format)
+CL.RBF          : Using RBF transformation? (0/1)
+CL.GAMMA        : RBF parameter
+CL.LABELS       : Category labels
+</p><p>
+Options:
+</p><p>
+Type ['C']
+</p><pre>
+  Set the SVM type to 'C' or 'nu'.
+</pre><p>
+C [1]
+</p><pre>
+  Set the SVM C parameter. The C parameter establishes the
+  trade-off between maximizing the margin of the decision function
+  from the correctly classified data and the number of
+  misclassified data. A large C gives more importance to reducing
+  the number of mistakes, but may increase overfitting.
+</pre><p>
+Nu [.5]
+</p><pre>
+  Set the nu-SVM nu parameter.
+</pre><p>
+RBF [0]
+</p><pre>
+  Enable RBF transformation. Assuming that the input argument K is
+  actually a metric, the kernel is defined as K' = EXP(- gamma K).
+</pre><p>
+Gamma [[]]
+</p><pre>
+  GAMMA constant of the RBF transformation.
+</pre><p>
+Balance [0]
+</p><pre>
+  Enable data balancing. Balancing reweights the data so that the
+  empirical error term (see C option) in the SVM cost functional
+  is computed assuming that the labels are equally probable.
+  Balancing affects the value of the C parameter for each sample,
+  increasing its value for the less represented labels.
+</pre><p>
+CrossValidation [0]
+</p><pre>
+  Perform N-fold cross validation to determine the optimal value of
+  the paramter C. In this case specifying C has no effect.
+</pre><p>
+Verbosity [0]
+</p><pre>
+  Set verbosity level.
+</pre><p>
+Debug [0]
+</p><pre>
+  Print debugging informations.
+</pre><p>
+Probability [0]
+</p><pre>
+  Return probability of classification instead of the decision value.
+</pre><p>
+LIMITATIONS. Currently, only C-SVM is supported.
+</p><p>
+See also <a href="SVMKERNELTEST.html">SVMKERNELTEST</a>().
+</p></div></div>
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="../js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 

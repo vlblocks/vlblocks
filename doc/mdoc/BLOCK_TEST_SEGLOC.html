@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="../web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Documentaton - BLOCKS - BLOCK_TEST_SEGLOC</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="../index.html">
+     <img src="../images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Documentaton - BLOCKS - BLOCK_TEST_SEGLOC
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="../index.html">Home</a>
+</li>
+<li><a href="../download.html">Download</a>
+</li>
+<li><a href="mdoc.html">Documentaton</a>
+</li>
+<li><a href="../overview/tut.html">Tutorials</a>
+</li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+    <div class="mdoc">
+<ul class="breadcrumb"><li><a href="mdoc.html">Index</a></li><li><a href="BKBEGIN.html">Prev</a></li><li><a href="BLOCK_VISMULTI.html">Next</a></li></ul><div class="documentation"><p>
+Superpixel neighborhoods, as proposed in Fulkerson et. al 2009.
+</p><p>
+BK = <a href="BLOCK_TEST_SEGLOC.html">BLOCK_TEST_SEGLOC</a>() Initializes the block with the default
+options.
+</p><p>
+BK = <a href="BLOCK_TEST_SEGLOC.html">BLOCK_TEST_SEGLOC</a>(BK) Executes the block with options and
+inputs BK.
+</p><p>
+Required inputs:
+</p><dl><dt>
+db
+</dt><dd><p>
+The database.
+</p></dd><dt>
+hist
+</dt><dd><p>
+The segment histograms.
+</p></dd><dt>
+classifier
+</dt><dd><p>
+The trained segment classifier.
+</p></dd></dl><p>
+Options:
+</p><dl><dt>
+bk.rand_seed
+</dt><dd><p>
+Set the random seeds before proceeding. Default of [] does not
+change the seeds.
+</p></dd><dt>
+bk.seg_neighbors
+</dt><dd><p>
+The number of neighbors to use. Default 0.
+</p></dd><dt>
+bk.testall
+</dt><dd><p>
+Test on all segments instead of only training segments. Default
+0.
+</p></dd></dl><p>
+Fetchable attributes:
+</p><dl><dt>
+test
+</dt><dd><p>
+Classification result (images). Returns [class confidence] for
+required input: seg_id.
+</p></dd><dt>
+segtest
+</dt><dd><p>
+Classification result (superpixels). Returns [class confidence]
+for required input: seg_id. class is a vector Nx1 where N is the
+number of superpixels. confidence is a matrix Nx1 cell array,
+where each cell is a Cx1 vector expressing the confidence in
+each of C classes.
+</p></dd></dl></div></div>
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="../js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 

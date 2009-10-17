@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="../web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Documentaton - BLOCKS - BLOCK_FEAT</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="../index.html">
+     <img src="../images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Documentaton - BLOCKS - BLOCK_FEAT
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="../index.html">Home</a>
+</li>
+<li><a href="../download.html">Download</a>
+</li>
+<li><a href="mdoc.html">Documentaton</a>
+</li>
+<li><a href="../overview/tut.html">Tutorials</a>
+</li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+    <div class="mdoc">
+<ul class="breadcrumb"><li><a href="mdoc.html">Index</a></li><li><a href="BLOCK_QUICKSEG.html">Prev</a></li><li><a href="BKFETCH.html">Next</a></li></ul><div class="documentation"><p>
+This block extracts features from images in a database.
+</p><p>
+BK = <a href="BLOCK_DICTIONARY.html">BLOCK_DICTIONARY</a>() Initializes the block with the default
+options.
+</p><p>
+BK = <a href="BLOCK_DICTIONARY.html">BLOCK_DICTIONARY</a>(BK) Executes the block with options and
+inputs BK.
+</p><p>
+Required Inputs:
+</p><dl><dt>
+db
+</dt><dd><p>
+The database to extract features from. All segments will be
+processed.
+</p></dd></dl><p>
+Options:
+</p><dl><dt>
+bk.rand_seed
+</dt><dd><p>
+Set the random seed. Default is [], which does not change the
+random seed.
+</p></dd><dt>
+bk.detector
+</dt><dd><p>
+The type of feature detector to use. Default 'sift'. Valid types
+are:
+sift:         Standard SIFT detector (DoG) from VLFeat.
+ipld:         Harris multiscale + DoG (IPLD implementation).
+iplddog:      The DoG from the IPLD implementation.
+dsift:        Dense SIFT. Only compatible with dsift descriptor.
+dsift-color:  Same as dsift. Only compatible with dsift-color
+</p><pre>
+              descriptor.
+</pre></dd><dt>
+bk.descriptor
+</dt><dd><p>
+The type of feature descriptor to use. Default 'sift'. Valid
+types are:
+sift:         Standard SIFT descriptor from VLFeat.
+siftnosmooth: Standard SIFT descriptor which ommits smoothing.
+ipld:         Standard SIFT descriptor (IPLD implementation).
+dsift:        Dense SIFT descriptor.
+dsift-color:  Dense color SIFT descriptor
+</p></dd><dt>
+bk.ref_size
+</dt><dd><p>
+Resize images to have their longest side equal to this number
+before processing. Default of [] means leave the images
+unmodified.
+</p></dd><dt>
+bk.min_sigma
+</dt><dd><p>
+Throw away detected features whose frame size is less than
+min_sigma. Frame size is relative to the ref_size of the image.
+</p></dd><dt>
+bk.max_num
+</dt><dd><p>
+A limit on how many features are extracted. Default +inf.
+</p></dd><dt>
+bk.rescale
+</dt><dd><p>
+Descriptors are computed on regions whose radius is rescale times
+the scale sigma of the frame. For the standard sift descriptor,
+for instance, rescale is two times the magnification paramter of
+the descriptor. Default 6.
+</p></dd></dl><p>
+DSIFT and DSIFT-COLOR Options:
+</p><p>
+bk.dsift_size:
+</p><pre>
+  The size of a spatial bin in dsift. For example, 3 will create a
+  descriptor which is 12x12 pixels. This option is required when
+  using this descriptor.
+</pre><p>
+bk.dsift_step:
+</p><pre>
+  The step size in pixels between descriptors. 1 produces a
+  descriptor for every pixel of the image. This option is required
+  when using this descriptor.
+</pre><p>
+DSIFT-COLOR Options:
+</p><p>
+bk.dsift_minnorm:
+</p><pre>
+  Discard descriptors whose norm is less than dsift_minnorm in
+  both the red and green channels.
+</pre></div></div>
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="../js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 

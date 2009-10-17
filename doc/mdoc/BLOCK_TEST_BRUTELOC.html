@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="../web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Documentaton - BLOCKS - BLOCK_TEST_BRUTELOC</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="../index.html">
+     <img src="../images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Documentaton - BLOCKS - BLOCK_TEST_BRUTELOC
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="../index.html">Home</a>
+</li>
+<li><a href="../download.html">Download</a>
+</li>
+<li><a href="mdoc.html">Documentaton</a>
+</li>
+<li><a href="../overview/tut.html">Tutorials</a>
+</li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+    <div class="mdoc">
+<ul class="breadcrumb"><li><a href="mdoc.html">Index</a></li><li><a href="BKPLUG.html">Prev</a></li><li><a href="BKEND.html">Next</a></li></ul><div class="documentation"><p>
+Brute-force localization, as proposed in Fulkerson et. al 2008.
+</p><p>
+BK = <a href="BLOCK_TEST_BRUTELOC.html">BLOCK_TEST_BRUTELOC</a>() Initializes the block with the default
+options.
+</p><p>
+BK = <a href="BLOCK_TEST_BRUTELOC.html">BLOCK_TEST_BRUTELOC</a>(BK) Executes the block with options and
+inputs BK.
+</p><p>
+Required inputs:
+</p><dl><dt>
+db
+</dt><dd><p>
+The database.
+</p></dd><dt>
+feat
+</dt><dd><p>
+Features extracted on the database
+</p></dd><dt>
+hist
+</dt><dd><p>
+Histograms extracted on the database.
+</p></dd><dt>
+svm
+</dt><dd><p>
+A trained SVM.
+</p></dd><dt>
+kernel
+</dt><dd><p>
+The kernel the SVM was trained with.
+</p></dd></dl><p>
+Options:
+</p><dl><dt>
+bk.rand_seed
+</dt><dd><p>
+Default [] does not change the random seeds.
+</p></dd><dt>
+bk.scaleby
+</dt><dd><p>
+Downsample the image by this factor before classification.
+Default 4.
+</p></dd><dt>
+bk.windowsize
+</dt><dd><p>
+Half-width of the window to use in hisogram computation.
+Expressed in terms of the non-downsampled image.  Default 80.
+</p></dd><dt>
+bk.classifier
+</dt><dd><p>
+The type of classifier to use. Valid options: 'svm' or 'nn'.
+Default 'svm'.
+</p></dd><dt>
+bk.seg_ids
+</dt><dd><p>
+The segment ids to classify. Default [] uses all testing images
+in the database.
+</p></dd></dl><p>
+Fetchable attributes:
+</p><dl><dt>
+test
+</dt><dd><p>
+The classification result. Returns [class confidence] for
+required input: seg_id.
+</p></dd></dl></div></div>
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="../js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 

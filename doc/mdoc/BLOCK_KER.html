@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">   
+ <meta>
+  <!-- Stylesheets -->
+  <link href="../web.css" type="text/css" rel="stylesheet"></link>
+  <title>Blocks - Documentaton - BLOCKS - BLOCK_KER</title>
+   
+  
+  <!-- Scripts-->
+  
+ </meta>
+ 
+ <!-- Body Start -->
+ <body>
+  <div id="header">
+   <!-- Google CSE Search Box Begins -->
+   <form action="http://www.vlblocks.org/search.html" method="get" id="cse-search-box" enctype="application/x-www-form-urlencoded">
+    <div>
+     <input type="hidden" name="cx" value="003215582122030917471:oq23albfeam"></input>
+     <input type="hidden" name="cof" value="FORID:11"></input>
+     <input type="hidden" name="ie" value="UTF-8"></input>
+     <input type="text" name="q" size="31"></input>
+     <input type="submit" name="sa" value="Search"></input>
+    </div>
+   </form>
+   <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" xml:space="preserve" type="text/javascript"></script>
+   <!-- Google CSE Search Box Ends -->
+   <a shape="rect" href="../index.html">
+     <img src="../images/blocks.png" alt="Blocks" border="0" width="205" height="36"></img> 
+   </a>
+  </div>
+  <div id="headbanner">
+   Documentaton - BLOCKS - BLOCK_KER
+  </div>
+  <div id="pagebody">
+   <div id="sidebar"> <!-- Navigation Start -->
+    <ul>
+<li><a href="../index.html">Home</a>
+</li>
+<li><a href="../download.html">Download</a>
+</li>
+<li><a href="mdoc.html">Documentaton</a>
+</li>
+<li><a href="../overview/tut.html">Tutorials</a>
+</li>
+</ul>
+
+   </div> <!-- sidebar -->
+   <div id="content">
+    <div class="mdoc">
+<ul class="breadcrumb"><li><a href="mdoc.html">Index</a></li><li><a href="BLOCK_DBPART.html">Prev</a></li><li><a href="BKSPLIT.html">Next</a></li></ul><div class="documentation"><p>
+This block constructs an SVM kernel on two sets of segment ids or
+segment ids and superpixel ids.
+</p><p>
+BK = <a href="BLOCK_KER.html">BLOCK_KER</a>() Initializes the block with the default options.
+</p><p>
+BK = <a href="BLOCK_KER.html">BLOCK_KER</a>(BK) Executes the block with options and inputs BK.
+</p><p>
+Required Inputs:
+</p><dl><dt>
+hist
+</dt><dd><p>
+Histograms or superpixel histograms.
+</p></dd></dl><p>
+Options:
+</p><dl><dt>
+bk.kernel
+</dt><dd><p>
+The type of kernel to use. The following are supported:
+</p><p>
+L2     - k(x,y) = sum x .* y
+L1     - k(p,q) = sum min(p,q)
+CHI2   - k(p,q) = sum  2 (p.*q) / (p+q)
+HELL   - k(p,q) = sum  sqrt(p.*q) / 4
+</p><p>
+DL2    - k(x,y) = sum (x-y).^2
+DL1    - k(p,q) = sum |p-q|
+DCHI2  - k(p,q) = sum (p-q).^2 / (p+q)
+DHELL  - k(p,q) = sum (p.^.5 - q.^.5).^2 / 4
+</p></dd></dl><pre>
+ Here p,q denote non-negative vectors, usually l1 normalized
+ (histograms). Notice that DL2, DL1, DCHI2 and DHELL are not
+ kernels, but the corresponding metrics (this is useful to
+ construct RBF kernels). See also KERNEL_FUNCTION() and
+ VL_ALLDIST2(). This parameter is required and there is no
+ default.
+</pre><dl><dt>
+bk.normalize
+</dt><dd><p>
+Normalize the data by the specified norm (L1, L2, ...) before
+computing the kernel. See also <a href="KERNEL_FUNCTION.html">KERNEL_FUNCTION</a>(). This parameter
+is required and there is no default.
+</p></dd><dt>
+bk.row_seg_ids
+</dt><dd><p>
+The seg_ids of the rows of the kernel matrix. If use_segs and
+seg_neighbors are set, row_seg_ids is a Nx2 matrx, where the
+first column denotes the seg_id and the second column denotes
+the superpixel.
+</p></dd><dt>
+bk.col_seg_ids
+</dt><dd><p>
+The seg_ids of the columns of the kernel matrix.  If use_segs and
+seg_neighbors are set, col_seg_ids is a Nx2 matrx, where the
+first column denotes the seg_id and the second column denotes
+the superpixel.
+</p></dd><dt>
+bk.use_segs
+</dt><dd><p>
+Use superpixel neighborhoods.
+</p></dd><dt>
+bk.seg_neighbors
+</dt><dd><p>
+The size of the neighborhood to use. If this parameter is
+ommited, even if bk.use_segs is true, segs will not be used.
+</p></dd><dt>
+bk.split
+</dt><dd><p>
+Split the job into a number of subtasks. 0 disables splitting.
+</p></dd></dl></div></div>
+   </div>
+   <div class="clear">&nbsp;</div>
+  </div> <!-- pagebody -->
+  <div id="footer">
+   &copy; 2009 Brian Fulkerson and Andrea Vedaldi
+  </div> <!-- footer -->
+  
+  <!-- Google Analytics Begins -->
+  <script src="../js/gatag.js" xml:space="preserve" type="text/javascript"></script>
+  <script xml:space="preserve" type="text/javascript">
+   //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   }
+   //]]>
+  </script>
+  <script xml:space="preserve" type="text/javascript">
+    //<![CDATA[
+    var localre = /vlblocks.org/;
+    if(document.location.host.search(localre) != -1)
+    {
+
+   try {
+   var pageTracker = _gat._getTracker("UA-4936091-3");
+   pageTracker._trackPageview();
+   } catch(err) {}
+
+   }
+   //]]>
+  </script>
+  <!-- Google Analytics Ends -->
+ </body>
+</html>
+
+ 
