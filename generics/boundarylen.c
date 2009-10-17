@@ -1,4 +1,9 @@
 #include "mex.h"
+
+#if ! defined (MX_API_VER) | (MX_API_VER < 0x07030000)
+typedef unsigned int mwSize ;
+#endif
+
 #include <stdlib.h>
 
 void mexFunction(
@@ -11,6 +16,11 @@ void mexFunction(
    
   enum {IN_MAP=0,IN_NLABELS} ;
   enum {OUT_NEIGHBORS} ;
+
+  int nlabels, rows, cols;
+  double * map, * neighbors;
+  int i, c, r;
+  mwSize dims[2];
 
   /****************************************************************************
    * ERROR CHECKING
@@ -27,25 +37,26 @@ void mexFunction(
   if(mxGetClassID(in[IN_NLABELS]) != mxDOUBLE_CLASS)
     mexErrMsgTxt("NLABELS must be a double");
 
-  int nlabels = (int) *mxGetPr(in[IN_NLABELS]);
-  int rows = mxGetM(in[IN_MAP]);
-  int cols = mxGetN(in[IN_MAP]);
+  nlabels = (int) *mxGetPr(in[IN_NLABELS]);
+  rows = mxGetM(in[IN_MAP]);
+  cols = mxGetN(in[IN_MAP]);
 
-  mwSize dims[2] = {nlabels,nlabels};
+  dims[0] = nlabels;
+  dims[1] = nlabels;
+
   out[OUT_NEIGHBORS] = mxCreateNumericArray(2, dims, mxDOUBLE_CLASS, mxREAL);
 
-  double * map = mxGetPr(in[IN_MAP]);
-  double * neighbors = mxGetPr(out[OUT_NEIGHBORS]);
+  map = mxGetPr(in[IN_MAP]);
+  neighbors = mxGetPr(out[OUT_NEIGHBORS]);
 
-  int i = 0;
-  int c, r;
+  i = 0;
   for (c = 0; c < cols; c++ )
     for (r = 0; r < rows; r++ )
     {
       if(r != rows-1)
       {
-        int l1 = map[i]-1;
-        int l2 = map[i+1]-1;
+        int l1 = (int)map[i]-1;
+        int l2 = (int)map[i+1]-1;
         if(l1 != l2) 
         {
           neighbors[ l1 + l2*nlabels ]++;
@@ -54,8 +65,8 @@ void mexFunction(
       }
       if(c != cols-1)
       {
-        int l1 = map[i]-1;
-        int l2 = map[i+rows]-1;
+        int l1 = (int)map[i]-1;
+        int l2 = (int)map[i+rows]-1;
         if(l1 != l2) 
         {
           neighbors[ l1 + l2*nlabels ]++;
