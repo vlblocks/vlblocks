@@ -94,10 +94,6 @@ all-mex : $(mex_tgt)
 #                                                       Clean and dist
 # --------------------------------------------------------------------
 
-TIMESTAMP:
-	echo "Version $(VER)"            > TIMESTAMP
-	echo "Archive created on `date`" >>TIMESTAMP
-
 .PHONY: clean
 clean:
 	rm -f  `find . -name '*~'`
@@ -116,10 +112,8 @@ distclean: clean
 
 .PHONY: dist
 dist: d := $(notdir $(CURDIR)) 
-dist: clean TIMESTAMP 
-	tar chzvf $(DIST).tar.gz ../$(d)    	                      \
-	  --exclude '.git'                                            \
-	  --exclude '$(DIST)-*'
+dist: clean
+	git archive --format=zip --prefix=blocks/ v$(VER) > blocks-$(VER).zip 
 
 .PHONY: autorights
 autorights: distclean
